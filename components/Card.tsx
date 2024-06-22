@@ -9,6 +9,7 @@ import { StyleSheet } from "react-native";
 import { Colors } from "@/constants/Colors";
 import CalendarHeader from "./CalendarHeader";
 
+
 interface Card {
   data: Action | null;
   customer?: Customer;

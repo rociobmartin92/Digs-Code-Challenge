@@ -23,11 +23,13 @@ export default function CalendarHeader({ status, scheduledDate }) {
           <ThemedText style={styles.number}>{dayNumber}</ThemedText>
 
           {status === "Completed" ? (
-            <View style={{ marginHorizontal: 4 }}>
+            <View style={[styles.iconContainer, { marginHorizontal: 4 }]}>
               <CheckCircleIcon color={"#00B47D"} size={16} />
             </View>
           ) : (
-            <ClockIcon color={"#00B47D"} size={18} />
+            <View style={styles.iconContainer}>
+              <ClockIcon color={"#00B47D"} size={17} />
+            </View>
           )}
         </View>
       )}
@@ -54,5 +56,8 @@ const styles = StyleSheet.create({
     // fontFamily: "SF Pro Display",
     fontSize: 20,
     fontWeight: 700,
+  },
+  iconContainer: {
+    marginVertical: 5,
   },
 });
